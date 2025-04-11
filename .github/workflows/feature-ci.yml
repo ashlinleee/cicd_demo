@@ -1,0 +1,19 @@
+name: Feature CI/CD Development
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: runtest
+        run: echo "Running on feature branch"
+
+      - name: deploy
+      run: echo "Deploying on feature branch"
+
